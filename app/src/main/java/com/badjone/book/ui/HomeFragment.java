@@ -25,7 +25,7 @@ public class HomeFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_home, container,false);
+        View view = inflater.inflate(R.layout.fragment_home, container, false);
         initView(view);
 
 //        mStartColor = new int[]{
@@ -46,7 +46,7 @@ public class HomeFragment extends Fragment {
                 Color.BLUE,
         };
         mEndColor = new int[]{
-                Color.RED
+                Color.GREEN
         };
 
         mArcView.setColor(Color.RED, Color.RED);
