@@ -1,0 +1,71 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao'
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    defaultConfig {
+        applicationId rootProject.ext.android.applicationId
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+
+greendao {
+    schemaVersion rootProject.ext.db.schemaVersion
+    daoPackage rootProject.ext.db["daoPackage"]
+    targetGenDir rootProject.ext.db["targetGenDir"]
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //android
+    implementation rootProject.ext.dependencies["appcompat-v7"]
+    implementation rootProject.ext.dependencies["design"]
+    implementation rootProject.ext.dependencies["constraint-layout"]
+    //test
+    testImplementation rootProject.ext.test["junit"]
+    androidTestImplementation rootProject.ext.test["runner"]
+    androidTestImplementation rootProject.ext.test["espresso"]
+    //utils
+    implementation rootProject.ext.dependencies["utils"]
+    //recycle
+    implementation rootProject.ext.dependencies["recycle-adapter"]
+    implementation rootProject.ext.dependencies["SmartRefreshLayout"]
+    implementation rootProject.ext.dependencies["SmartRefreshLayout-head"]
+    implementation rootProject.ext.dependencies["SmartRefreshLayout-core"]
+    implementation rootProject.ext.dependencies["SmartRefreshLayout-commons"]
+    //retrofit+rxJava+okHttp
+    implementation rootProject.ext.dependencies["okhttp3"]
+    implementation rootProject.ext.dependencies["rxjava2"]
+    implementation rootProject.ext.dependencies["rxandroid2"]
+    implementation rootProject.ext.dependencies["rxlifecycle2"]
+    implementation rootProject.ext.dependencies["rxlifecycle-android2"]
+    implementation rootProject.ext.dependencies["rxlifecycle-components2"]
+    implementation rootProject.ext.dependencies["retrofit2"]
+    implementation rootProject.ext.dependencies["rxjava2-adapter"]
+    implementation rootProject.ext.dependencies["rxjava2-adapter-gson"]
+    //db
+    implementation rootProject.ext.dependencies["greendao"]
+    implementation rootProject.ext.dependencies["greendao-generator"]
+    //tabLayout
+    implementation rootProject.ext.dependencies["FlycoTabLayout_Lib"]
+    //glide
+    implementation rootProject.ext.dependencies["glide"]
+    annotationProcessor rootProject.ext.dependencies["glide-compiler"]
+    //xml parse
+    implementation rootProject.ext.dependencies["jsoup"]
+    //leakCanary
+    debugImplementation rootProject.ext.dependencies["leakcanary"]
+    releaseImplementation rootProject.ext.dependencies["leakcanary-no-op"]
+}

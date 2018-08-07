@@ -1,0 +1,100 @@
+ext {
+    android = [
+            compileSdkVersion: 27,
+            buildToolsVersion: "27.0.3",
+            applicationId    : "com.badjone.book",
+            minSdkVersion    : 16,
+            targetSdkVersion : 27,
+            versionCode      : 3,
+            versionName      : "1.3"
+    ]
+
+    db = [
+            "daoPackage"   : "com.badjone.book.greendao",
+            "targetGenDir" : "src/main/java",
+            //数据库版本
+            "schemaVersion": 5
+    ]
+
+
+    version = [
+            androidSupportSdkVersion: "27.1.0",
+            retrofitSdkVersion      : "2.4.0",
+            dagger2SdkVersion       : "2.15",
+            glideSdkVersion         : "4.6.1",
+            butterknifeSdkVersion   : "8.8.1",
+            rxlifecycleSdkVersion   : "1.0",
+            rxlifecycle2SdkVersion  : "2.2.1",
+            espressoSdkVersion      : "3.0.1",
+            canarySdkVersion        : "1.5.4"
+    ]
+
+    test = [
+            "junit"   : 'junit:junit:4.12',
+            "runner"  : 'com.android.support.test:runner:1.0.2',
+            "espresso": 'com.android.support.test.espresso:espresso-core:3.0.2'
+    ]
+    dependencies = [
+            "appcompat-v7"              : 'com.android.support:appcompat-v7:27.1.1',
+            "recyclerview-v7"           : 'com.android.support:recyclerview-v7:27.1.1',
+            "design"                    : 'com.android.support:design:27.1.1',
+            "constraint-layout"         : 'com.android.support.constraint:constraint-layout:1.1.2',
+
+            /** ******************************************************************************************/
+            //adatpter
+            "recycle-adapter"           : 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.40',
+            //utils
+            "utils"                     : 'com.blankj:utilcode:1.17.0',
+
+            //OkHttp
+            "okhttp3"                   : 'com.squareup.okhttp3:okhttp:3.3.1',
+
+            "gson"                      : 'com.squareup.retrofit2:converter-gson:2.1.0',
+            "okhttp-urlconnection"      : "com.squareup.okhttp:okhttp-urlconnection:2.0.0",
+
+//            retrofit
+            "retrofit2"                 : "com.squareup.retrofit2:retrofit:${version["retrofitSdkVersion"]}",
+//            "retrofit-converter-gson"   : "com.squareup.retrofit2:converter-gson:${version["retrofitSdkVersion"]}",
+            "rxjava2-adapter"           : "com.squareup.retrofit2:adapter-rxjava2:${version["retrofitSdkVersion"]}",
+            "rxjava2-adapter-gson"      : "com.squareup.retrofit2:converter-gson:${version["retrofitSdkVersion"]}",
+
+//            rxjava2
+            "rxandroid2"                : "io.reactivex.rxjava2:rxandroid:2.0.2",
+            "rxjava2"                   : "io.reactivex.rxjava2:rxjava:2.1.12",
+            "rxlifecycle2"              : "com.trello.rxlifecycle2:rxlifecycle:${version["rxlifecycle2SdkVersion"]}",
+            "rxlifecycle-android2"      : "com.trello.rxlifecycle2:rxlifecycle-android:${version["rxlifecycle2SdkVersion"]}",
+            "rxlifecycle-components2"   : "com.trello.rxlifecycle2:rxlifecycle-components:${version["rxlifecycle2SdkVersion"]}",
+
+            //数据库
+            "greendao"                  : 'org.greenrobot:greendao:3.2.2',
+            "greendao-generator"        : 'org.greenrobot:greendao-generator:3.2.2',
+
+            //图表库
+            "MPAndroidChart"            : 'com.github.PhilJay:MPAndroidChart:v3.0.3',
+            "jpush"                     : 'cn.jiguang.sdk:jpush:3.1.1',
+            // 此处以JPush 3.1.1 版本为例。
+            "jcore-core"                : 'cn.jiguang.sdk:jcore:1.1.9',
+            // 此处以JCore 1.1.9 版本为例。
+            "FlycoTabLayout_Lib"        : 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar',
+            //loading
+            "loading"                   : 'com.wang.avi:library:2.1.3',
+            "SmartRefreshLayout"        : 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-6',
+            "SmartRefreshLayout-head"   : 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-6',
+            //没有使用特殊Header，可以不加这行
+            "SmartRefreshLayout-core"   : 'com.afollestad.material-dialogs:core:0.9.6.0',
+            "SmartRefreshLayout-commons": 'com.afollestad.material-dialogs:commons:0.9.6.0',
+
+            "MaterialSearchBar"         : 'com.github.mancj:MaterialSearchBar:0.7.6',
+            //glide图片加载
+            "glide"                     : 'com.github.bumptech.glide:glide:4.7.1',
+            "glide-compiler"            : 'com.github.bumptech.glide:compiler:4.7.1',
+
+            "leakcanary"                : 'com.squareup.leakcanary:leakcanary-android:1.5.4',
+            "leakcanary-no-op"          : 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4',
+            "filepicker"                : 'com.droidninja:filepicker:2.1.5',
+            "Luban"                     : 'top.zibin:Luban:1.1.7',
+            "timelineview"              : 'com.github.vipulasri:timelineview:1.0.6',
+            //解析html
+            "jsoup"                     : 'org.jsoup:jsoup:1.11.3'
+    ]
+}
