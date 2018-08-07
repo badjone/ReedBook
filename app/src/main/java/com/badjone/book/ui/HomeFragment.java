@@ -43,7 +43,7 @@ public class HomeFragment extends Fragment {
 
         //增加提示信息
         mStartColor = new int[]{
-                Color.BLUE,
+                Color.YELLOW,
         };
         mEndColor = new int[]{
                 Color.GREEN
