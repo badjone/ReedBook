@@ -41,7 +41,7 @@ public class HomeFragment extends Fragment {
 //
 //        mArcView.setColor(getResources().getColor(R.color.start_color), getResources().getColor(R.color.end_color));
 
-        //增加提示信息
+        //增加提示信息11111
         mStartColor = new int[]{
                 Color.YELLOW,
         };
