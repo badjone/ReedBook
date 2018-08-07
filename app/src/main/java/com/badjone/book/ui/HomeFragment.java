@@ -14,7 +14,7 @@ import com.badjone.book.widget.ArcLineView;
 
 /**
  * @author BadJone
- * @data 2018/8/4.
+ * @date 2018/8/4.
  */
 
 public class HomeFragment extends Fragment {
@@ -25,7 +25,7 @@ public class HomeFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_home, null);
+        View view = inflater.inflate(R.layout.fragment_home, container,false);
         initView(view);
 
 //        mStartColor = new int[]{
@@ -41,7 +41,7 @@ public class HomeFragment extends Fragment {
 //
 //        mArcView.setColor(getResources().getColor(R.color.start_color), getResources().getColor(R.color.end_color));
 
-
+        //增加提示信息
         mStartColor = new int[]{
                 Color.RED,
         };
@@ -55,6 +55,6 @@ public class HomeFragment extends Fragment {
     }
 
     private void initView(View view) {
-        mArcView = (ArcLineView) view.findViewById(R.id.arc_view);
+        mArcView = view.findViewById(R.id.arc_view);
     }
 }
